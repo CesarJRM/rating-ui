@@ -8,15 +8,15 @@ function Rating({ heading = 'Rate Your Experience!', starColor = 'gold' }) {
     // const [submitted, setSubmitted] = useState(false)
 
     //const clicked = (index) => console.log('clicked', index)
-    const feedbsckMessage = ['Terrible', 'Poor', 'Fair', 'Good', 'Excellent']
+    const feedbackMessage = ['Terrible', 'Poor', 'Fair', 'Good', 'Excellent']
 
     return(
         <div className="rating-container">
-            <h2>Rate Your Experience!</h2>
+            <h2>{heading}</h2>
             <p>{rating}</p>
             <p>{hover}</p>
-            <div className="start">
-                {[1,2,3,4,5].map((start) => (
+            <div className="stars">
+                {[1,2,3,4,5].map((star) => (
                     <span
                         key={star}
                         onClick={() => setRating(star)}
@@ -32,7 +32,7 @@ function Rating({ heading = 'Rate Your Experience!', starColor = 'gold' }) {
 
                 }
             </div>
-            {rating > 0 && <p className="Feedback">{feedbackMessage[rating - 1]}</p>}
+            {rating > 0 && <p className="feedback">{feedbackMessage[rating - 1]}</p>}
         </div>
     )
 }

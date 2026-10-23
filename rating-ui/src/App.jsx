@@ -1,4 +1,4 @@
-import Rating from "./components/Rating"
+import Rating from "./componets/Rating"
 
 function App() {
 
